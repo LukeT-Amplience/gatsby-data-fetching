@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
+import {getMostRecentPosts} from './../api/api'
 
-export default function index() {
+export default function Index() {
+
   return (
     <main>
       <Layout pageTitle="Home Page">
@@ -15,3 +17,5 @@ export default function index() {
     </main>
   )
 }
+
+
