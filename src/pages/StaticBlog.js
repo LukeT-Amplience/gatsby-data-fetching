@@ -1,11 +1,17 @@
 import React from 'react'
+import Layout from '../components/layout'
 
 export default function StaticBlog({ pageContext: { fetchedPosts } }) {
   return (
     <div>
-      {fetchedPosts.map(post => (
-        <h1>{post.title}</h1>
-      ))}
+      <Layout pageTitle="My Blog Posts">
+        {fetchedPosts.map(post => (
+          <div>
+            <h2>{post.title}</h2>
+            <p>{post.content}</p>
+          </div>
+        ))}
+      </Layout>
     </div>
   )
 }

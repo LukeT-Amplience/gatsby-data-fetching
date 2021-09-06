@@ -41,6 +41,11 @@ export default function Layout({ pageTitle, children }) {
               Blog
             </Link>
           </li>
+          <li className={navLinkItem}>
+            <Link to="/StaticBlog" className={navLinkText}>
+              Static Blog
+            </Link>
+          </li>
         </ul>
       </nav>
       <main>
