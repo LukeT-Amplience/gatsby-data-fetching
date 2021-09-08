@@ -13,5 +13,8 @@ module.exports = {
         path: `${__dirname}/blog`,
       }
     },
+    {
+      resolve: "gatsby-source-fixer"
+    }
   ],
 };

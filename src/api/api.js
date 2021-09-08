@@ -1,9 +1,4 @@
-const NODE_TLS_REJECT_UNAUTHORIZED="0"
-
-
 export async function getMostRecentPosts() {
-  const AMPLIENCE_DELIVERY_API="https://eu-west-1.cdv2.content.amplience-turing.net"
-  const AMPLIENCE_HUB="cdv3"
   const query = {
     filterBy: [
       {
@@ -37,14 +32,12 @@ export async function getMostRecentPosts() {
 function extractContentFromFilterByResponse({ responses }) {
   return responses.map(({ content }) => {
     content.slug = content._meta.deliveryKey;
-    console.log(content);
     return content;
   });
 }
 
 export async function getPostBySlug(slug) {
-  const AMPLIENCE_DELIVERY_API="https://eu-west-1.cdv2.content.amplience-turing.net"
-const AMPLIENCE_HUB="cdv3"
+  const AMPLIENCE_HUB="cdv3"
 
   const response = await fetch(
     `https://eu-west-1.cdv2.content.amplience-turing.net/content/key/${slug}?depth=all&format=inlined`,
